@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pebble Pet Pal!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Stars Background -->
+    <div class="stars-container"></div>
+
+    <!-- Opening Screen -->
+    <div class="screen" id="opening-screen">
+        <h1>Welcome to Pebble Pet Pal!</h1>
+        <p>Are you ready to become the best rock parent ever?</p>
+        <button id="start-btn">Start Game</button>
+    </div>
+
+    <!-- Game Choice Screen -->
+    <div class="screen" id="game-choice-screen">
+        <h1>New Session or Continue Last Session?</h1>
+        <button id="new-game-btn">New Session</button>
+        <button id="continue-game-btn">Continue Session</button>
+    </div>
+
+    <!-- Name Selection Screen -->
+<div class="screen" id="name-screen">
+    <h1>Give Your Rock a Name</h1>
+    <input type="text" id="rock-name-input" placeholder="Enter name" class="fancy-input">
+    <button class="confirm-btn">Confirm</button>
+    
+    <!-- 🎲 Random Name Generator Button -->
+    <div class="name-generator">
+        <button id="random-name-btn">🎲 Generate Random Name</button>
+    </div>
+</div>
+
+    <!-- Cosmetic Selection Screen -->
+    <div class="screen" id="cosmetic-screen">
+        <h1>Choose Your Rock's Look</h1>
+        <label>Color: <input type="color" id="rock-color-picker" class="fancy-input"></label>
+        <div class="cosmetic-grid">
+            <div class="cosmetic-item" data-hat="none">No Hat</div>
+            <div class="cosmetic-item" data-hat="top-hat">Top Hat</div>
+            <div class="cosmetic-item" data-hat="cowboy-hat">Cowboy Hat</div>
+            <div class="cosmetic-item" data-hat="party-hat">Party Hat</div>
+            <div class="cosmetic-item" data-hat="crown">Crown</div>
+            <div class="cosmetic-item" data-hat="beret">Beret</div>
+        </div>
+        <button id="confirm-cosmetics-btn">Confirm</button>
+    </div>
+
+    <!-- Loading Screen -->
+    <div class="screen" id="loading-screen">
+        <h1>Loading your Pebble Pet Pal...</h1>
+        <p>Preparing your virtual rock. Please wait a moment.</p>
+    </div>
+
+    <!-- Main Game Screen -->
+    <div class="screen" id="main-content">
+        <!-- Grass and Sky Background -->
+        <div class="background"></div>
+
+        <h1><span id="rock-name"></span></h1>
+        <canvas id="rock-canvas" width="200" height="200"></canvas>
+
+        <!-- 🗨️ Speech Bubble added here -->
+        <div id="speech-bubble" class="speech-bubble hidden"></div>
+
+        <div class="status">
+            <p>Age: <span id="rock-age">0</span> days</p>
+            <p>Happiness: <span id="rock-happiness">5</span>/10</p>
+            <p>Hunger: <span id="rock-hunger">5</span>/10</p>
+            <p>Dirtiness: <span id="rock-dirtiness">0</span>/10</p>
+        </div>
+
+        <div class="actions">
+            <button id="feed-btn">Feed</button>
+            <button id="clean-btn">Clean</button>
+            <button id="play-btn">Play</button>
+            <button id="simulate-btn">New Day</button>
+            <button id="status-btn">Check Status</button>
+        </div>
+    </div>
+    
+    <script src="scripts.js"></script>
+</body>
+</html>
